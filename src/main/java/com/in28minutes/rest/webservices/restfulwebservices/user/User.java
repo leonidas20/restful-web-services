@@ -9,8 +9,6 @@ public class User {
 	private String name;
 	
 	private Date birthDate;
-	
-	
 
 	public User(Integer id, String name, Date birthDate) {
 		super();
@@ -47,7 +45,4 @@ public class User {
 	public String toString() {
 		return String.format("User [id=%s, name=%s, birthDate=%s]", id, name, birthDate);
 	}
-	
-	
-	
 }
