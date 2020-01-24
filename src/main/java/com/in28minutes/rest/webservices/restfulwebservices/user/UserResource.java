@@ -29,14 +29,14 @@ public class UserResource {
 	// retrieveUser(int id)
 	@GetMapping("/users/{id}")
 	public User retrieveUser(@PathVariable int id) {
-		
+
 		User user = service.findOne(id);
-		if (user == null) 
-			throw new UserNotFoundException("id-"+id);
-		
+		if (user == null)
+			throw new UserNotFoundException("id-" + id);
+
 		return user;
 	}
-	
+
 	//
 	// input - details of user
 	// output - CREATED & Return the created URI
@@ -46,12 +46,12 @@ public class UserResource {
 		User savedUser = service.save(user);
 		// CREATED
 		// user//{id} savedUser.getId
-		URI location =
-		ServletUriComponentsBuilder.
-		fromCurrentRequest().
-		path("/{id}").
-		buildAndExpand(savedUser.getId()).toUri();
-		
+		URI location = ServletUriComponentsBuilder.
+				fromCurrentRequest().
+				path("/{id}").
+				buildAndExpand(savedUser.getId())
+				.toUri();
+
 		return ResponseEntity.created(location).build();
 	}
 }
