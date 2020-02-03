@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-@ApiModel(description="All detailis about the user. ")
+@ApiModel(description="All details about the user. ")
 @Entity
 public class User {
 
@@ -67,8 +67,6 @@ public class User {
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
 	}
-	
-	
 
 	public List<Post> getPosts() {
 		return posts;
