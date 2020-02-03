@@ -48,8 +48,4 @@ public class Post {
 	public String toString() {
 		return "Entity [id=" + id + ", description=" + description + "]";
 	}
-	
-	
-	
-
 }
